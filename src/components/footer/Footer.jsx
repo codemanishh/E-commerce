@@ -3,70 +3,70 @@ import "./Footer.css"
 const Footer = () => {
     return (
         <div>
-            <div class="footer-area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <h4 class="footer-heading">Funda E-Commerce</h4>
-                            <div class="footer-underline"></div>
+            <div className="footer-area">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-3">
+                            <h4 className="footer-heading">Bloom E-Commerce</h4>
+                            <div className="footer-underline"></div>
                             <p>
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                             </p>
                         </div>
-                        <div class="col-md-3">
-                            <h4 class="footer-heading">Quick Links</h4>
-                            <div class="footer-underline"></div>
-                            <div class="mb-2"><a href="" class="text-white">Home</a></div>
-                            <div class="mb-2"><a href="" class="text-white">About Us</a></div>
-                            <div class="mb-2"><a href="" class="text-white">Contact Us</a></div>
-                            <div class="mb-2"><a href="" class="text-white">Blogs</a></div>
-                            <div class="mb-2"><a href="" class="text-white">Sitemaps</a></div>
+                        <div className="col-md-3">
+                            <h4 className="footer-heading">Quick Links</h4>
+                            <div className="footer-underline"></div>
+                            <div className="mb-2"><a href="/" className="text-white">Home</a></div>
+                            <div className="mb-2"><a href="/" className="text-white">About Us</a></div>
+                            <div className="mb-2"><a href="/" className="text-white">Contact Us</a></div>
+                            <div className="mb-2"><a href="/" className="text-white">Blogs</a></div>
+                            <div className="mb-2"><a href="/" className="text-white">Sitemaps</a></div>
                         </div>
-                        <div class="col-md-3">
-                            <h4 class="footer-heading">Shop Now</h4>
-                            <div class="footer-underline"></div>
-                            <div class="mb-2"><a href="" class="text-white">Collections</a></div>
-                            <div class="mb-2"><a href="" class="text-white">Trending Products</a></div>
-                            <div class="mb-2"><a href="" class="text-white">New Arrivals Products</a></div>
-                            <div class="mb-2"><a href="" class="text-white">Featured Products</a></div>
-                            <div class="mb-2"><a href="" class="text-white">Cart</a></div>
+                        <div className="col-md-3">
+                            <h4 className="footer-heading">Shop Now</h4>
+                            <div className="footer-underline"></div>
+                            <div className="mb-2"><a href="/" className="text-white">Collections</a></div>
+                            <div className="mb-2"><a href="/" className="text-white">Trending Products</a></div>
+                            <div className="mb-2"><a href="/" className="text-white">New Arrivals Products</a></div>
+                            <div className="mb-2"><a href="/" className="text-white">Featured Products</a></div>
+                            <div className="mb-2"><a href="/" className="text-white">Cart</a></div>
                         </div>
-                        <div class="col-md-3">
-                            <h4 class="footer-heading">Reach Us</h4>
-                            <div class="footer-underline"></div>
-                            <div class="mb-2">
+                        <div className="col-md-3">
+                            <h4 className="footer-heading">Reach Us</h4>
+                            <div className="footer-underline"></div>
+                            <div className="mb-2">
                                 <p>
-                                    <i class="fa fa-map-marker"></i> #444, some main road, some area, some street, bangalore, india - 560077
+                                    <i className="fa fa-map-marker"></i> #444, some main road, some area, some street, bangalore, india - 560077
                                 </p>
                             </div>
-                            <div class="mb-2">
-                                <a href="" class="text-white">
-                                    <i class="fa fa-phone"></i> +91 888-XXX-XXXX
+                            <div className="mb-2">
+                                <a href="/" className="text-white">
+                                    <i className="fa fa-phone"></i> +91 888-XXX-XXXX
                                 </a>
                             </div>
-                            <div class="mb-2">
-                                <a href="" class="text-white">
-                                    <i class="fa fa-envelope"></i> fundaofwebit@gmail.com
+                            <div className="mb-2">
+                                <a href="/" className="text-white">
+                                    <i className="fa fa-envelope"></i> fundaofwebit@gmail.com
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="copyright-area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <p class=""> &copy; 2022 - Funda of Web IT - Ecommerce. All rights reserved.</p>
+            <div className="copyright-area">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-8">
+                            <p className=""> &copy; 2023 - Bloom of Web IT - Ecommerce. All rights reserved.</p>
                         </div>
-                        <div class="col-md-4">
-                            <div class="social-media">
+                        <div className="col-md-4">
+                            <div className="social-media">
                                 Get Connected:
-                                <a href=""><i class="fa fa-facebook"></i></a>
-                                <a href=""><i class="fa fa-twitter"></i></a>
-                                <a href=""><i class="fa fa-instagram"></i></a>
-                                <a href=""><i class="fa fa-youtube"></i></a>
+                                <a href="/"><i className="fa fa-facebook"></i></a>
+                                <a href="/"><i className="fa fa-twitter"></i></a>
+                                <a href="/"><i className="fa fa-instagram"></i></a>
+                                <a href="/"><i className="fa fa-youtube"></i></a>
                             </div>
                         </div>
                     </div>
