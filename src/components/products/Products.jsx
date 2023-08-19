@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import "./Products.css"
-import { Link, useSearchParams } from 'react-router-dom'
+import { useSearchParams } from 'react-router-dom'
 import Loading from '../loading/Loading'
+import ProductItem from '../productsItem/ProductItem'
+
 const Products = ({ category }) => {
     const [searchParams] = useSearchParams()
     const searchItem = searchParams.get('item')
@@ -33,6 +35,7 @@ const Products = ({ category }) => {
         fetchProducts()
     }, [category, searchItem])
 
+
     return (
         <div className="py-3 py-md-5 bg-light">
             <div className="container">
@@ -40,29 +43,7 @@ const Products = ({ category }) => {
                     <div className="col-md-12">
                         <h4 className="mb-4 capitalize">{category ? category : "Our Products"}</h4>
                     </div>
-                    {loading ? <Loading /> : products.length > 0 ? products.map(product => <div className="col-md-3" key={product.id}>
-                        <div className="product-card">
-                            <div className="product-card-img">
-                                <label className="stock bg-success">In Stock</label>
-                                <img src={product.image} />
-                            </div>
-                            <div className="product-card-body">
-                                <h5 className="product-name">
-                                    <Link to={"/products/" + product.id}>
-                                        {product.title}
-                                    </Link>
-                                </h5>
-                                <div>
-                                    <span className="selling-price">${product.price}</span>
-                                </div>
-                                <div className="mt-2">
-                                    <a href="" className="btn btn1">Add To Cart</a>
-                                    <a href="" className="btn btn1"> <i className="fa fa-heart"></i> </a>
-                                    <Link to={"/products/" + product.id} className="btn btn1"> View </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>) : <div className='noProduct'>No product found</div>}
+                    {loading ? <Loading /> : products.length > 0 ? products.map(product => <ProductItem key={product.id} product={product} />) : <div className='noProduct'>No product found</div>}
                 </div>
             </div>
         </div>

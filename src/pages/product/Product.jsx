@@ -4,7 +4,11 @@ import Navbar from '../../components/navbar/Navbar'
 import { useParams } from 'react-router-dom'
 import Footer from '../../components/footer/Footer'
 import Loading from '../../components/loading/Loading'
+import { useDispatch } from 'react-redux'
+import { cartAction } from '../../store/cart-slice'
+import { Link } from 'react-router-dom'
 const Product = () => {
+    const dispatch = useDispatch()
     const [product, setProduct] = useState()
     const [loading, setLoading] = useState(false)
     const productId = useParams().productId
@@ -18,6 +22,10 @@ const Product = () => {
     useEffect(() => {
         fetchProduct()
     }, [productId])
+
+    const addToCartHandler = () => {
+        dispatch(cartAction.addItemToCart(product))
+    }
     return (
         <div>
             <Navbar />
@@ -41,14 +49,15 @@ const Product = () => {
                                 </div>
                                 <div className="mt-2">
                                     <div className="input-group">
-                                        <span className="btn btn1"><i className="fa fa-minus"></i></span>
+                                        {/* <span className="btn btn1"><i className="fa fa-minus"></i></span>
                                         <input type="text" value="1" className="input-quantity" />
-                                        <span className="btn btn1"><i className="fa fa-plus"></i></span>
+                                        <span className="btn btn1"><i className="fa fa-plus"></i></span> */}
+
                                     </div>
                                 </div>
                                 <div className="mt-2">
-                                    <a href="" className="btn btn1"> <i className="fa fa-shopping-cart"></i> Add To Cart</a>
-                                    <a href="" className="btn btn1"> <i className="fa fa-heart"></i> Add To Wishlist </a>
+                                    <div className="btn btn1" onClick={addToCartHandler}> <i className="fa fa-shopping-cart"></i> Add To Cart</div>
+                                    <Link to="" className="btn btn1"> <i className="fa fa-money"></i> Buy Now </Link>
                                 </div>
                                 <div className="mt-3">
                                     <h5 className="mb-0">Small Description</h5>

@@ -1,7 +1,11 @@
 import React from 'react'
 import "./Cart.css"
 import Navbar from '../../components/navbar/Navbar'
+import CartItem from '../../components/cart/CartItem'
+import { useSelector } from 'react-redux'
 const Cart = () => {
+    const cartItems = useSelector(state => state.cart.items)
+    console.log("Items: ", cartItems)
     return (
         <div>
             <Navbar />
@@ -29,37 +33,12 @@ const Cart = () => {
                                     </div>
                                 </div>
 
-                                <div className="cart-item">
-                                    <div className="row">
-                                        <div className="col-md-6 my-auto">
-                                            <a href="">
-                                                <label className="product-name">
-                                                    <img src="hp-laptop.jpg" alt="" />
-                                                    Hp Laptop
-                                                </label>
-                                            </a>
-                                        </div>
-                                        <div className="col-md-2 my-auto">
-                                            <label className="price">$569 </label>
-                                        </div>
-                                        <div className="col-md-2 col-7 my-auto">
-                                            <div className="quantity">
-                                                <div className="input-group">
-                                                    <span className="btn btn1"><i className="fa fa-minus"></i></span>
-                                                    <input type="text" value="1" className="input-quantity" />
-                                                    <span className="btn btn1"><i className="fa fa-plus"></i></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-2 col-5 my-auto">
-                                            <div className="remove">
-                                                <a href="" className="btn btn-danger btn-sm">
-                                                    <i className="fa fa-trash"></i> Remove
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                {cartItems &&
+                                    cartItems.length > 0 ?
+                                    cartItems.map(item => <CartItem key={item.id} product={item} />)
+                                    :
+                                    <div>No product in cart</div>
+                                }
                             </div>
                         </div>
                     </div>

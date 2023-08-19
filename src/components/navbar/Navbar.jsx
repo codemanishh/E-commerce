@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import "./Navbar.css"
 import { Link, useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 const Navbar = () => {
     const [searchText, setSearchText] = useState()
     const navigate = useNavigate()
+    const totalQuantity = useSelector(state => state.cart.totalQuantity)
 
     const searchButtonHandler = (e) => {
         e.preventDefault()
@@ -33,12 +35,7 @@ const Navbar = () => {
 
                                 <li className="nav-item">
                                     <Link className="nav-link" to="/cart">
-                                        <i className="fa fa-shopping-cart"></i> Cart (0)
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/wishlist">
-                                        <i className="fa fa-heart"></i> Wishlist (0)
+                                        <i className="fa fa-shopping-cart"></i> Cart ({totalQuantity})
                                     </Link>
                                 </li>
                                 <li className="nav-item dropdown">
