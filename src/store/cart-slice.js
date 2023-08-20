@@ -30,7 +30,7 @@ const cartSlice = createSlice({
             const exist = state.items.find(item => item.id === newItem.id)
             if (exist.quantity > 1) {
                 exist.quantity--;
-                exist.totalPrice = exist.totalPrice - newItem.totalPrice
+                exist.totalPrice = exist.totalPrice - newItem.price
             }
 
         }

@@ -2,8 +2,8 @@ import React from 'react'
 import "./Loading.css"
 const Loading = () => {
     return (
-        <div class="center-body">
-            <div class="loader-circle-2"></div>
+        <div className="center-body">
+            <div className="loader-circle-2"></div>
 
         </div>
     )

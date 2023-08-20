@@ -4,6 +4,7 @@ import Category from './pages/category/Category';
 import Cart from './pages/cart/Cart';
 import Product from './pages/product/Product';
 import Checkout from './pages/checkout/Checkout';
+import Error from './pages/error/Error';
 function App() {
   return (
     <div>
@@ -15,6 +16,7 @@ function App() {
           <Route path="/categories/:category" element={<Category />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/products/:productId/checkout" element={<Checkout />} />
+          <Route path="/error" element={<Error />} />
         </Routes>
       </BrowserRouter>
     </div>

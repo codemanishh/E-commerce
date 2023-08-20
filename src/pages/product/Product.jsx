@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./Product.css"
 import Navbar from '../../components/navbar/Navbar'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import Footer from '../../components/footer/Footer'
 import Loading from '../../components/loading/Loading'
 import { useDispatch } from 'react-redux'
@@ -9,6 +9,7 @@ import { cartAction } from '../../store/cart-slice'
 import { Link } from 'react-router-dom'
 const Product = () => {
     const dispatch = useDispatch()
+    const navigate = useNavigate()
     const [product, setProduct] = useState()
     const [rating, setRating] = useState(0)
     const [loading, setLoading] = useState(false)
@@ -16,6 +17,8 @@ const Product = () => {
     const fetchProduct = async () => {
         setLoading(true)
         const response = await fetch(`https://fakestoreapi.com/products/${productId}`)
+        if (!response.ok)
+            navigate("/error")
         const data = await response.json()
         setProduct(data)
         setRating(data.rating)

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import "./Checkout.css"
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import Footer from '../../components/footer/Footer'
 import Navbar from '../../components/navbar/Navbar'
 import Loading from '../../components/loading/Loading'
 const Checkout = () => {
+    const navigate = useNavigate()
     const [product, setProduct] = useState()
     const [loading, setLoading] = useState(false)
     const productId = useParams().productId
@@ -12,6 +13,8 @@ const Checkout = () => {
     const fetchProduct = async () => {
         setLoading(true)
         const response = await fetch(`https://fakestoreapi.com/products/${productId}`)
+        if (!response.ok)
+            navigate("/error")
         const data = await response.json()
         setProduct(data)
         setLoading(false)
@@ -79,13 +82,13 @@ const Checkout = () => {
                                                     <button className="nav-link fw-bold" id="onlinePayment-tab" data-bs-toggle="pill" data-bs-target="#onlinePayment" type="button" role="tab" aria-controls="onlinePayment" aria-selected="false">Online Payment</button>
                                                 </div>
                                                 <div className="tab-content col-md-9" id="v-pills-tabContent">
-                                                    <div className="tab-pane fade" id="cashOnDeliveryTab" role="tabpanel" aria-labelledby="cashOnDeliveryTab-tab" tabindex="0">
+                                                    <div className="tab-pane fade" id="cashOnDeliveryTab" role="tabpanel" aria-labelledby="cashOnDeliveryTab-tab" tabIndex="0">
                                                         <h6>Cash on Delivery Mode</h6>
                                                         <hr />
                                                         <button type="button" className="btn btn-primary">Place Order (Cash on Delivery)</button>
 
                                                     </div>
-                                                    <div className="tab-pane fade" id="onlinePayment" role="tabpanel" aria-labelledby="onlinePayment-tab" tabindex="0">
+                                                    <div className="tab-pane fade" id="onlinePayment" role="tabpanel" aria-labelledby="onlinePayment-tab" tabIndex="0">
                                                         <h6>Online Payment Mode</h6>
                                                         <hr />
                                                         <button type="button" className="btn btn-warning">Pay Now (Online Payment)</button>
