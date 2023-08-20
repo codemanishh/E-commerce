@@ -3,6 +3,7 @@ import Home from './pages/home/Home';
 import Category from './pages/category/Category';
 import Cart from './pages/cart/Cart';
 import Product from './pages/product/Product';
+import Checkout from './pages/checkout/Checkout';
 function App() {
   return (
     <div>
@@ -13,6 +14,7 @@ function App() {
           <Route path="/products/:productId" element={<Product />} />
           <Route path="/categories/:category" element={<Category />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/products/:productId/checkout" element={<Checkout />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux'
 import Footer from '../../components/footer/Footer'
 const Cart = () => {
     const cartItems = useSelector(state => state.cart.items)
-    console.log("Items: ", cartItems)
+
     return (
         <div>
             <Navbar />

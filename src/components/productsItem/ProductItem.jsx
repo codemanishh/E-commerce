@@ -26,7 +26,6 @@ const ProductItem = ({ product }) => {
                     </div>
                     <div className="mt-2">
                         <div className="btn btn1" onClick={addToCartHandler}>Add To Cart</div>
-                        <div className="btn btn1"> <i className="fa fa-heart"></i> </div>
                         <Link to={"/products/" + product.id} className="btn btn1"> View </Link>
                     </div>
                 </div>
