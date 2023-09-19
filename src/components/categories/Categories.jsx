@@ -12,7 +12,7 @@ const Categories = () => {
         },
         {
             title: "men's clothing",
-            image: "https://mooseclothingcompany.com/wp-content/uploads/2023/07/MOOSE-CLOTHING0723-scaled-transformed.png"
+            image: "https://n.nordstrommedia.com/id/95b689e1-64b7-400e-b6a1-df34e4485574.jpeg?h=500&w=500"
         },
         {
             title: "women's clothing",

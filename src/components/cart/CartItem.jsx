@@ -32,7 +32,7 @@ const Cart = ({ product }) => {
                     </Link>
                 </div>
                 <div className="col-md-2 my-auto">
-                    <label className="price">${product.totalPrice} </label>
+                    <label className="price">${product.totalPrice.toFixed(2)} </label>
                 </div>
                 <div className="col-md-2 col-7 my-auto">
                     <div className="quantity">
