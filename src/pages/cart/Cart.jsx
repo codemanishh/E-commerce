@@ -4,6 +4,7 @@ import Navbar from '../../components/navbar/Navbar'
 import CartItem from '../../components/cart/CartItem'
 import { useSelector } from 'react-redux'
 import Footer from '../../components/footer/Footer'
+import CartTotal from '../../pages/cart/CartTotal'
 const Cart = () => {
     const cartItems = useSelector(state => state.cart.items)
 
@@ -42,6 +43,7 @@ const Cart = () => {
 
                 </div>
             </div> : <div className="noProductInCart">No products in the cart</div>}
+            <CartTotal />
             <Footer />
         </div>
     )
