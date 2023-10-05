@@ -9,10 +9,10 @@ const ProductItem = ({ product }) => {
         dispatch(cartAction.addItemToCart(product))
     }
     return (
-        <div className="col-md-3" key={product.id}>
-            <div className="product-card">
-                <div className="product-card-img">
-                    <label className="stock bg-success">In Stock</label>
+        <div className="col-md-3 rounded" key={product.id}>
+            <div className="product-card rounded">
+                <div className="product-card-img rounded">
+                    <label className="stock bg-success  rounded">In Stock</label>
                     <img src={product.image} alt="" />
                 </div>
                 <div className="product-card-body">
@@ -25,8 +25,8 @@ const ProductItem = ({ product }) => {
                         <span className="selling-price">${product.price}</span>
                     </div>
                     <div className="mt-2">
-                        <div className="btn btn1" onClick={addToCartHandler}>Add To Cart</div>
-                        <Link to={"/products/" + product.id} className="btn btn1"> View </Link>
+                        <div className="btn btn1 rounded border-warning" onClick={addToCartHandler}>Add To Cart</div>
+                        <Link to={"/products/" + product.id} className="btn btn1 rounded border-warning"> View </Link>
                     </div>
                 </div>
             </div>
