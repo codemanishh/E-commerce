@@ -36,5 +36,5 @@ _**[Click Here to See]( https://www.linkedin.com/posts/codemanishh_shoppingcart-
 ![empty]( link )
 
 ## _⚠️When Cart is Empty⚠️_
-![empty]( link )
+![empty]( linke )
 
