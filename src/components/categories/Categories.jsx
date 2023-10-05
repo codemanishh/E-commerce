@@ -27,11 +27,11 @@ const Categories = () => {
                         <h4 className="mb-4">Our Categories</h4>
                     </div>
                     {categories.map((category, index) =>
-                        <div className="col-6 col-md-3" key={index}>
-                            <div className="category-card">
+                        <div className="col-6 col-md-3 rounded border-primary" key={index}>
+                            <div className="category-card rounded border-primary">
                                 <Link to={"/categories/" + category.title}>
-                                    <div className="category-card-img">
-                                        <img src={category.image} className="w-100" alt="Laptop" />
+                                    <div className="category-card-img rounded">
+                                        <img src={category.image} className="w-100 rounded" alt="Laptop" />
                                     </div>
                                     <div className="category-card-body">
                                         <h5>{category.title}</h5>
