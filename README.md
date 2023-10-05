@@ -27,14 +27,14 @@ _**[Click Here to See]( https://www.linkedin.com/posts/codemanishh_shoppingcart-
 
 
 ## _⚠️main dashboard⚠️_
-![empty]( link )
+![empty]( ./src/img/home.jpg )
 
 ## _⚠️cart data after adding products⚠️_
-![empty]( link )
+![empty]( ./src/img/cart.jpg  )
 
-## _⚠️After checkout cart view⚠️_
-![empty]( link )
+## _⚠️After clicking on order now⚠️_
+![empty]( ./src/img/order%20details.jpg )
 
-## _⚠️When Cart is Empty⚠️_
-![empty]( linke )
+## _⚠️After clicking on a product⚠️_
+![empty]( ./src/img/product%20details.jpg )
 
